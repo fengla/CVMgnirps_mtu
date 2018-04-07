@@ -42,6 +42,8 @@ public class ActivityDTO {
     //是否保留这个活动须知？tips
     private String tips;
 
+    public ActivityDTO(){}
+
     public ActivityDTO(String name, String date, String location, String charge, int chargeDetail, int sponsor, String details, String tips){
         this.name = name;
         this.date = date;
@@ -52,5 +54,6 @@ public class ActivityDTO {
         this.details = details;
         this.tips = tips;
     }
+
 
 }

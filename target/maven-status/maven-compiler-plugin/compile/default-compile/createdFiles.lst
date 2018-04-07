@@ -14,3 +14,4 @@ com/meetu/controller/StudentController.class
 com/meetu/service/UserService.class
 com/meetu/dto/ActivityDTO.class
 com/meetu/config/ActivityConfig.class
+com/meetu/dto/CommentDTO.class

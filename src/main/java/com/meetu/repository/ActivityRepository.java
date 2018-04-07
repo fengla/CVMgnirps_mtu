@@ -18,4 +18,6 @@ public interface ActivityRepository extends CrudRepository<ActivityDTO, Long>{
     public List<ActivityDTO> findAll();//查询所有活动
 
     public List<ActivityDTO> findAllByDateAfter(String date);//查询当前日期之后的所有活动
+
+    public ActivityDTO findById(Long id);
 }

@@ -6,6 +6,7 @@
 /Users/admin/spring/meetuspring/src/main/java/com/meetu/service/UserService.java
 /Users/admin/spring/meetuspring/src/main/java/com/meetu/controller/ActivityController.java
 /Users/admin/spring/meetuspring/src/main/java/com/meetu/repository/UserRepository.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/dto/CommentDTO.java
 /Users/admin/spring/meetuspring/src/main/java/com/meetu/controller/StudentController.java
 /Users/admin/spring/meetuspring/src/main/java/com/meetu/config/UserConfig.java
 /Users/admin/spring/meetuspring/src/main/java/com/meetu/dao/UserDAO.java

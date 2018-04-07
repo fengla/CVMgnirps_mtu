@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 
 <head>
@@ -39,101 +40,42 @@
 
                                     <div class="ibox-content">
 
-                                            <div class="feed-activity-list">
+                                            <%--<div class="feed-activity-list">--%>
 
+                                                <%--<div class="feed-element">--%>
+                                                    <%--<a href="profile.html" class="pull-left">--%>
+                                                        <%--<img alt="image" class="img-circle" src="img/profile.jpg">--%>
+                                                    <%--</a>--%>
+                                                    <%--<div class="media-body ">--%>
+                                                        <%--<small class="pull-right">5m ago</small>--%>
+                                                        <%--<strong>时间:</strong> Today 5:60 pm - 12.06.2014 <br>--%>
+                                                        <%--<strong>地点:</strong> 朝阳区 北京化工大学东校区操场 <br>--%>
+                                                        <%--<strong>费用:</strong> 免费 <br>--%>
+                                                        <%--<strong>发起人:</strong> ipv009 <br>--%>
+                                                        <%--<a href="#"><i class="fa fa-angle-double-right" style="margin-top:5px"><Strong>详情</strong></i></a>--%>
+                                                    <%--</div>--%>
+                                                <%--</div>--%>
+
+                                            <%--</div>--%>
+                                                <%--<h2>${activityDTOList}<h2>--%>
+                                         <div class="feed-activity-list">
+                                            <c:forEach items="${activityDTOList}" var="activity">
                                                 <div class="feed-element">
-                                                    <a href="profile.html" class="pull-left">
-                                                        <img alt="image" class="img-circle" src="img/profile.jpg">
+                                                    <a href="#" class="pull-left">
+                                                        <%--可以考虑把这个38放大一点。。即先固定高度，再确定宽度;这样的话就不需要margin了--%>
+                                                        <img alt="image" style="width:38px;height:56px;margin-top:15px" src="http://localhost:8080${activity.logo}">
                                                     </a>
                                                     <div class="media-body ">
                                                         <small class="pull-right">5m ago</small>
-                                                        <strong>时间:</strong> Today 5:60 pm - 12.06.2014 <br>
-                                                        <strong>地点:</strong> 朝阳区 北京化工大学东校区操场 <br>
-                                                        <strong>费用:</strong> 免费 <br>
-                                                        <strong>发起人:</strong> ipv009 <br>
-                                                        <a href="#"><i class="fa fa-angle-double-right" style="margin-top:5px"><Strong>详情</strong></i></a>
+                                                        <strong>时间:</strong> ${activity.date} <br>
+                                                        <strong>地点:</strong> ${activity.location} <br>
+                                                        <strong>费用:</strong> ${activity.charge} <br>
+                                                        <strong>发起人:</strong> ${activity.sponsor} <br>
+                                                        <a href="http://localhost:8080/activityDetail?activityId=${activity.id}"><i class="fa fa-angle-double-right" style="margin-top:5px"><Strong>详情</strong></i></a>
                                                     </div>
                                                 </div>
-
-                                                <div class="feed-element">
-                                                    <a href="profile.html" class="pull-left">
-                                                        <img alt="image" class="img-circle" src="img/a2.jpg">
-                                                    </a>
-                                                    <div class="media-body ">
-                                                        <small class="pull-right">5m ago</small>
-                                                        <strong>时间:</strong> Today 5:60 pm - 12.06.2014 <br>
-                                                        <strong>地点:</strong> 朝阳区 北京化工大学东校区操场 <br>
-                                                        <strong>费用:</strong> 免费 <br>
-                                                        <strong>发起人:</strong> ipv009 <br>
-
-                                                    </div>
-                                                </div>
-                                                <div class="feed-element">
-                                                    <a href="profile.html" class="pull-left">
-                                                        <img alt="image" class="img-circle" src="img/a3.jpg">
-                                                    </a>
-                                                    <div class="media-body ">
-                                                        <small class="pull-right">5m ago</small>
-                                                        <strong>时间:</strong> Today 5:60 pm - 12.06.2014 <br>
-                                                        <strong>地点:</strong> 朝阳区 北京化工大学东校区操场 <br>
-                                                        <strong>费用:</strong> 免费 <br>
-                                                        <strong>发起人:</strong> ipv009 <br>
-
-                                                    </div>
-                                                </div>
-                                                <div class="feed-element">
-                                                    <a href="profile.html" class="pull-left">
-                                                        <img alt="image" class="img-circle" src="img/a4.jpg">
-                                                    </a>
-                                                    <div class="media-body ">
-                                                        <small class="pull-right">5m ago</small>
-                                                        <strong>时间:</strong> Today 5:60 pm - 12.06.2014 <br>
-                                                        <strong>地点:</strong> 朝阳区 北京化工大学东校区操场 <br>
-                                                        <strong>费用:</strong> 免费 <br>
-                                                        <strong>发起人:</strong> ipv009 <br>
-
-                                                    </div>
-                                                </div>
-                                                <div class="feed-element">
-                                                    <a href="profile.html" class="pull-left">
-                                                        <img alt="image" class="img-circle" src="img/a5.jpg">
-                                                    </a>
-                                                    <div class="media-body ">
-                                                        <small class="pull-right">5m ago</small>
-                                                        <strong>时间:</strong> Today 5:60 pm - 12.06.2014 <br>
-                                                        <strong>地点:</strong> 朝阳区 北京化工大学东校区操场 <br>
-                                                        <strong>费用:</strong> 免费 <br>
-                                                        <strong>发起人:</strong> ipv009 <br>
-
-                                                    </div>
-                                                </div>
-                                                <div class="feed-element">
-                                                    <a href="profile.html" class="pull-left">
-                                                        <img alt="image" class="img-circle" src="img/profile.jpg">
-                                                    </a>
-                                                    <div class="media-body ">
-                                                        <small class="pull-right">5m ago</small>
-                                                        <strong>时间:</strong> Today 5:60 pm - 12.06.2014 <br>
-                                                        <strong>地点:</strong> 朝阳区 北京化工大学东校区操场 <br>
-                                                        <strong>费用:</strong> 免费 <br>
-                                                        <strong>发起人:</strong> ipv009 <br>
-
-                                                    </div>
-                                                </div>
-                                                <div class="feed-element">
-                                                    <a href="profile.html" class="pull-left">
-                                                        <img alt="image" class="img-circle" src="img/a7.jpg">
-                                                    </a>
-                                                    <div class="media-body ">
-                                                        <small class="pull-right">5m ago</small>
-                                                        <strong>时间:</strong> Today 5:60 pm - 12.06.2014 <br>
-                                                        <strong>地点:</strong> 朝阳区 北京化工大学东校区操场 <br>
-                                                        <strong>费用:</strong> 免费 <br>
-                                                        <strong>发起人:</strong> ipv009 <br>
-
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            </c:forEach>
+                                         </div>
 
 
                                     </div>
@@ -147,7 +89,7 @@
                 <div class="footer" style="position:fixed;background-color:#44b549;color:white">
                   <ul class="" style="list-style:none">
 
-                    <li class="col-xs-3">
+                    <li class="col-xs-3" align="center">
                       <a href="index.html#" style="color:white">
                         <i class="fa fa-institution" style="padding-left:6px"></i><br>首页
                       </a>
@@ -252,13 +194,14 @@
 
     </script>
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-4625583-2', 'webapplayers.com');
-        ga('send', 'pageview');
+        alert(activityDTOList);
+        // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        //     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        //         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        //
+        // ga('create', 'UA-4625583-2', 'webapplayers.com');
+        // ga('send', 'pageview');
 
     </script>
 </body>

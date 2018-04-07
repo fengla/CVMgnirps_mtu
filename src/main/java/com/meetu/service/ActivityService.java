@@ -18,4 +18,8 @@ public class ActivityService {
     public List<ActivityDTO> findAll(){
         return activityRepository.findAll();
     }
+
+    public ActivityDTO findById(Long activityId){
+        return activityRepository.findById(activityId);
+    }
 }

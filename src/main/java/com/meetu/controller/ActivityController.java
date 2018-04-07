@@ -1,8 +1,10 @@
 package com.meetu.controller;
 
 import com.meetu.dto.ActivityDTO;
+import com.meetu.dto.CommentDTO;
 import com.meetu.dto.UserDTO;
 import com.meetu.service.ActivityService;
+import com.meetu.service.CommentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,10 +26,14 @@ import java.util.List;
 public class ActivityController {
 
     @Autowired
+    ServletContext context;//这是干吗的？还有其他什么方式实现文件上传吗？
+
+    @Autowired
     private ActivityService activityService;
 
     @Autowired
-    ServletContext context;//这是干吗的？还有其他什么方式实现文件上传吗？
+    private CommentService commentService;
+
 
     @GetMapping("/launchActivity")
     public ModelAndView launchActivity(ModelMap modelMap, UserDTO user){
@@ -44,8 +50,10 @@ public class ActivityController {
             //TODO: 怎么接收前端传来的数据呢？？？String name,String location看看这样能不能接收到数据呢？??
             //TODO:现在看来文件上传是没有问题了，就看看怎么提交表单？？？
             //todo: 搜索spriingBoot/springMVC提交表单
-            details = details.replaceAll("/n","<br>");
-            tips = tips.replaceAll("/n","<br>");
+            log.warn("before+details:" + details);
+            details = details.replaceAll("\r\n","<br>");
+            log.warn("after+details:" + details);
+            tips = tips.replaceAll("\r\n","<br>");
             activityDTO = new ActivityDTO(name, date, location, charge, chargeDetail, sponsor, details, tips);
             //todo:
             //怎么传userid进来呢？
@@ -89,9 +97,28 @@ public class ActivityController {
      */
     @GetMapping("/showActivities")
     public String showActivities(ModelMap modelMap){
+        log.warn("enter showActivities");
         List<ActivityDTO> activityDTOList = activityService.findAll();
+        log.warn("list.size:" + activityDTOList.size());
+        //log.warn("list:" + activityDTOList);
+        //log.warn("first:" + activityDTOList.get(0));
         modelMap.addAttribute("activityDTOList", activityDTOList);
         return "main";
+    }
+
+    /**
+     * 查询活动详情
+     */
+    @GetMapping("/activityDetail")
+    public String showActivities(ModelMap modelMap, Long activityId){
+        ActivityDTO activityDTO = activityService.findById(activityId);
+        modelMap.addAttribute("activity", activityDTO);
+
+        //todo:查询关联评论
+        List<CommentDTO> commentDTOList = commentService.findCommentDTOByActivityId(activityId);
+        modelMap.addAttribute("commentDTOList", commentDTOList);
+
+        return "activityDetail";
     }
 
 

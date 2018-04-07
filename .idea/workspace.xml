@@ -2,90 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed06ce40-b0f8-467f-add5-3d8caccd5e13" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/repository/ActivityRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/html/activityDetail.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/config/CommentConfig.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/controller/CommentController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/dto/CommentDTO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/repository/CommentRepository.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/service/CommentService.java" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/meetuspring_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/meetuspring_war_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/meetuspring.iml" afterPath="$PROJECT_DIR$/meetuspring.iml" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/Application.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/config/ActivityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/config/ActivityConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/config/UserConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/config/UserConfig.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/controller/ActivityController.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/controller/ActivityController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/controller/StudentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/controller/StudentController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/controller/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/dao/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/dao/UserDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/data/ActivityOutline.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/data/ActivityOutline.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/data/Student.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/data/Student.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/dto/ActivityDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/dto/ActivityDTO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/dto/UserDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/dto/UserDTO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/repository/UserRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/repository/ActivityRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/repository/ActivityRepository.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/service/ActivityService.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/service/ActivityService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meetu/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/meetu/service/UserService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/README.TXT" afterPath="$PROJECT_DIR$/src/main/webapp/README.TXT" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/html/launchActivity.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/html/launchActivity.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/html/login.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/html/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/html/main.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/html/profile.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/html/register.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/result.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/html/result.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/student.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/html/student.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/userDetail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/html/userDetail.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meetu/Application.class" afterPath="$PROJECT_DIR$/target/classes/com/meetu/Application.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meetu/controller/HelloWorldController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT.war" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT.war.original" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/application_spring_mvc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/classes/com/meetu/Application.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/classes/com/meetu/controller/HelloWorldController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/classes/com/meetu/data/User.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.3.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/hibernate-validator-5.3.5.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/jackson-annotations-2.8.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.8.9.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/jackson-databind-2.8.9.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/jcl-over-slf4j-1.7.25.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/jul-to-slf4j-1.7.25.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/log4j-over-slf4j-1.7.25.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/logback-classic-1.1.11.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/logback-core-1.1.11.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.22.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/snakeyaml-1.17.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.10.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.10.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-1.5.6.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-autoconfigure-1.5.6.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-1.5.6.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-logging-1.5.6.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-tomcat-1.5.6.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-web-1.5.6.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.10.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.10.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.10.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.10.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-core-8.5.16.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-el-8.5.16.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-websocket-8.5.16.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/lib/validation-api-1.1.0.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/mvc-dispatcher-servlet.xmll" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/web.xmlll" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/html/about.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/html/index2.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/html/userDetail.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/js/jquery.min.js" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -98,21 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ActivityDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/dto/ActivityDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="launchActivity.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/html/launchActivity.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+            <state relative-caret-position="357">
+              <caret line="43" column="168" lean-forward="false" selection-start-line="43" selection-start-column="168" selection-end-line="43" selection-end-column="168" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#label#0;n#div#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#label#0;n#div#1;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -125,8 +49,8 @@
       <file leaf-file-name="ActivityController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/controller/ActivityController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="90" column="31" lean-forward="false" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+            <state relative-caret-position="500">
+              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,79 +58,70 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/html/main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="913">
-              <caret line="135" column="50" lean-forward="true" selection-start-line="135" selection-start-column="50" selection-end-line="135" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activityDetail.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activityDetail.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/html/activityDetail.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="570">
               <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivityService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/service/ActivityService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#394#395#0" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
-                <element signature="e#486#487#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/repository/ActivityRepository.java">
+      <file leaf-file-name="CommentController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/controller/CommentController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+              <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/controller/UserController.java">
+      <file leaf-file-name="CommentRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/repository/CommentRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="56" column="78" lean-forward="true" selection-start-line="56" selection-start-column="78" selection-end-line="56" selection-end-column="78" />
+            <state relative-caret-position="90">
+              <caret line="10" column="72" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/service/UserService.java">
+      <file leaf-file-name="CommentService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/service/CommentService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="11" column="42" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="42" />
+            <state relative-caret-position="150">
+              <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/html/login.jsp">
+      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/html/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="37" column="88" lean-forward="false" selection-start-line="37" selection-start-column="88" selection-end-line="37" selection-end-column="88" />
+            <state relative-caret-position="1450">
+              <caret line="101" column="25" lean-forward="false" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="46" column="10" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="46" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -234,9 +149,9 @@
       <find>spring-boot</find>
       <find>http</find>
       <find>jdbc</find>
-      <find>jstl</find>
       <find>log4j</find>
       <find>activity.</find>
+      <find>jstl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -269,8 +184,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/html/student.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/controller/StudentController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/config/UserConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/html/register.jsp" />
@@ -278,18 +191,25 @@
         <option value="$PROJECT_DIR$/src/main/webapp/html/profile.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/dto/UserDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/html/main.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/dto/ActivityOutlineDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/dto/ActivityOutline.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/data/ActivityOutline.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/config/ActivityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/html/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/meetu/dto/ActivityDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/html/launchActivity.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/html/activityDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/meetu/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/repository/ActivityRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/service/ActivityService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/meetu/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/meetu/dto/ActivityDTO.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/meetu/dto/CommentDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/html/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/html/launchActivity.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/meetu/config/CommentConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/meetu/repository/CommentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/meetu/service/CommentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/meetu/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meetu/controller/ActivityController.java" />
       </list>
     </option>
@@ -388,6 +308,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="meetu" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meetuspring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meetuspring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="meetu" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -470,8 +399,9 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.meetu.repository" />
+      <recent name="com.meetu.service" />
       <recent name="com.meetu.config" />
+      <recent name="com.meetu.repository" />
       <recent name="com.meetu.controller" />
       <recent name="com.meetu.dto" />
     </key>
@@ -776,12 +706,20 @@
       <workItem from="1522566610846" duration="324000" />
       <workItem from="1522654846187" duration="89000" />
       <workItem from="1523018660870" duration="4933000" />
-      <workItem from="1523086715792" duration="5170000" />
+      <workItem from="1523086715792" duration="12173000" />
     </task>
+    <task id="LOCAL-00001" summary="发布活动">
+      <created>1523093040128</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1523093040129</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29990000" />
+    <option name="totallyTimeSpent" value="36993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-180" width="1920" height="1080" extended-state="0" />
@@ -853,6 +791,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="发布活动" />
+    <option name="LAST_COMMIT_MESSAGE" value="发布活动" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -873,41 +815,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.10.RELEASE/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.10.RELEASE/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/view/JstlView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/userDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/springMVC-servlet.xmll" />
     <entry file="file://$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/springMVC-servlet.xml" />
     <entry file="file://$PROJECT_DIR$/target/meetu-1.0-SNAPSHOT/WEB-INF/web.xml" />
@@ -1053,28 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="45" column="32" lean-forward="false" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/dto/UserDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1111,14 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/dto/ActivityDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/repository/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1143,10 +1020,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="56" column="78" lean-forward="false" selection-start-line="56" selection-start-column="78" selection-end-line="56" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/repository/ActivityRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/service/ActivityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="46" column="10" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="46" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="57" lean-forward="true" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/config/CommentConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/dto/ActivityDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/html/launchActivity.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+        <state relative-caret-position="357">
+          <caret line="43" column="168" lean-forward="false" selection-start-line="43" selection-start-column="168" selection-end-line="43" selection-end-column="168" />
           <folding>
             <element signature="n#style#0;n#input#0;n#label#0;n#div#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#label#0;n#div#1;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1155,60 +1104,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/activityDetail.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/service/CommentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/repository/ActivityRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="150">
+          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/service/ActivityService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/repository/CommentRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        <state relative-caret-position="90">
+          <caret line="10" column="72" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/dto/CommentDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1450">
+          <caret line="101" column="25" lean-forward="false" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/controller/CommentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="56" column="78" lean-forward="true" selection-start-line="56" selection-start-column="78" selection-end-line="56" selection-end-column="78" />
+        <state relative-caret-position="195">
+          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/meetu/controller/ActivityController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="90" column="31" lean-forward="false" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+        <state relative-caret-position="500">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/main.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/activityDetail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
-          <caret line="135" column="50" lean-forward="true" selection-start-line="135" selection-start-column="50" selection-end-line="135" selection-end-column="50" />
+        <state relative-caret-position="570">
+          <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
           <folding />
         </state>
       </provider>

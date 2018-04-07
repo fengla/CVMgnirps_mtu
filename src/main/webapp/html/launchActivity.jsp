@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page contentType="text/html; charset=utf-8" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 
@@ -41,7 +41,7 @@
 
 
                                         <%--以下为待提交的表单信息--%>
-                                        <form method="post" action="${pageContext.request.contextPath }/doLaunchActivity" class="form-horizontal" enctype="multipart/form-data">
+                                        <form method="post" action="${pageContext.request.contextPath}/doLaunchActivity" class="form-horizontal" enctype="multipart/form-data">
                                             <div class="form-group"><label class="col-sm-2 control-label">活动名称</label>
 
                                                 <div class="col-sm-10"><input type="text" class="form-control" name="name"></div>
