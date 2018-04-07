@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 
 <head>
@@ -29,12 +30,12 @@
             <p>欢迎来到meetu公众平台，有趣的活动，有料的文章，有品的伙伴，都在这里等你呢～
                 <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
             </p>
-            <form class="m-t" role="form" action="index.html">
+            <form:form class="m-t" role="form" action="/doLogin">
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="用户名" required="">
+                    <form:input type="email" class="form-control" placeholder="用户名" required="" path="email"/>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="密码" required="">
+                    <form:input type="password" class="form-control" placeholder="密码" required="" path="pwd"/>
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b" style="background-color:#44b549">登录</button>
 
@@ -42,7 +43,8 @@
                 <p class="text-muted text-center"><small>还没有meetu账号吗?</small></p>
                 <a class="btn btn-sm btn-white btn-block" href="register.html">微信登录</a>
                 <a class="btn btn-sm btn-white btn-block" href="register.html">创建账号</a>
-            </form>
+                <a class="btn btn-sm btn-white btn-block" href="register.html">访客模式浏览？？？是否支持这个？？？</a>
+            </form:form>
             <p class="m-t"> <small>CopyRight &copy meetu.cn ; 2018</small> </p>
         </div>
     </div>

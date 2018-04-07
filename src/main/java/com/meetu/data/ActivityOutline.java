@@ -1,4 +1,4 @@
-package com.meetu.dto;
+package com.meetu.data;
 
 import lombok.Data;
 
@@ -10,7 +10,9 @@ import java.util.Date;
 
 
 @Data
-public class ActivityOutlineDTO {
+public class ActivityOutline {
+
+    //todo:后续需要在ActivityRepository中自定义查询语句  @query(select name,id from activity;)这样
 
     private Long id;
 

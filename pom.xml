@@ -7,6 +7,14 @@
   <version>1.0-SNAPSHOT</version>
   <name>meetu Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.6.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
   <dependencies>
     <!--如何做单元测试Junit-->
     <!--<dependency>-->
@@ -18,7 +26,7 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
-      <version>1.5.6.RELEASE</version>
+      <!--<version>1.5.6.RELEASE</version>-->
       <!--<exclusions>-->
         <!--<exclusion>-->
           <!--<groupId>org.springframework.boot</groupId>-->
@@ -57,6 +65,43 @@
       <!--<artifactId>org.springframework.jdbc</artifactId>-->
       <!--<version>3.0.0.CI-331</version>-->
     <!--</dependency>-->
+
+
+    <!-- servlet 依赖 -->
+    <!--<dependency>-->
+      <!--<groupId>javax.servlet</groupId>-->
+      <!--<artifactId>javax.servlet-api</artifactId>-->
+      <!--<version>3.1.0</version>-->
+    <!--</dependency>-->
+      <dependency>
+          <groupId>org.apache.tomcat.embed</groupId>
+          <artifactId>tomcat-embed-jasper</artifactId>
+          <version>8.5.16</version>
+          <!--<scope>provided</scope>-->
+      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>org.springframework.boot</groupId>-->
+          <!--<artifactId>spring-boot-starter-data-mysql</artifactId>-->
+          <!--<version></version>-->
+      <!--</dependency>-->
+
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>6.0.6</version>
+      </dependency>
+
+
+    <!--<dependency>-->
+    <!--<groupId>org.springframework.boot</groupId>-->
+    <!--<artifactId>spring-boot-starter-jdbc</artifactId>-->
+    <!--<version>1.5.6.RELEASE</version>-->
+    <!--</dependency>-->
   </dependencies>
   <!--<build>-->
     <!--<finalName>meetu</finalName>-->
@@ -77,6 +122,7 @@
           </execution>
         </executions>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -85,6 +131,17 @@
           <target>1.8</target>
         </configuration>
       </plugin>
+        <!--todo ：下面这个可以删除吗？-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.1.1</version>
+        <configuration>
+          <webXml>WebContent\WEB-INF\web.xml</webXml>
+        </configuration>
+      </plugin>
     </plugins>
+
+
   </build>
 </project>

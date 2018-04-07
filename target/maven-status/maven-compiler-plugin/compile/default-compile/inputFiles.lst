@@ -1,3 +1,16 @@
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/config/ActivityConfig.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/data/Student.java
 /Users/admin/spring/meetuspring/src/main/java/com/meetu/data/User.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/repository/ActivityRepository.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/data/ActivityOutline.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/service/UserService.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/controller/ActivityController.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/repository/UserRepository.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/controller/StudentController.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/config/UserConfig.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/dao/UserDAO.java
 /Users/admin/spring/meetuspring/src/main/java/com/meetu/Application.java
-/Users/admin/spring/meetuspring/src/main/java/com/meetu/controller/HelloWorldController.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/controller/UserController.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/service/ActivityService.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/dto/UserDTO.java
+/Users/admin/spring/meetuspring/src/main/java/com/meetu/dto/ActivityDTO.java

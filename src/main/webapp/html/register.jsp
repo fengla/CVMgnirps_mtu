@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>登录 - meetu</title>
+    <title>注册 - meetu</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -32,48 +34,57 @@
             <p>Create account to see it in action.
                 <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
             </p>
-            <form class="m-t" role="form" action="index.html">
+
+
+            <!--这里form怎么指定get,post方法呢？还是说都可以？？？-->
+
+
+            <form:form class="m-t" role="form" method="POST" action="/doRegister">
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="登录邮箱" required="" name="userName">
+                    <form:input type="email" class="form-control" placeholder="登录邮箱" required="" path="email"/>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="登录密码" required="" name="pwd">
+                    <form:input type="password" class="form-control" placeholder="登录密码" required="" path="pwd"/>
                 </div>
                 <!--todo important-->
                 <!-- <div class="form-group">
-                    <input type="password" class="form-control" placeholder="重复密码" required="" name="pwd">
+                    <form:input type="password" class="form-control" placeholder="重复密码" required="" path="pwd"/>
                 </div> -->
                 <!-- 写一个js check两次输入的密码 -->
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="昵称" required="" name="nickName">
+                    <form:input type="text" class="form-control" placeholder="昵称" required="" path="nickName"/>
                 </div>
                 <div class="form-group" id="date">
                 <div class="input-group date" style="margin-bottom:15px">
 
                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                    <input type="text" class="form-control" value="09/09/1999">
+                    <form:input type="text" class="form-control" value="09/09/1999" path="birthday"/>
 
                 </div>
               </div>
                 <!-- 怎么改下拉列表？？？全国范围，北京放在第一个？？ 还是说当前只做北京一个地区-->
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="地区" required="" name="pwd">
+                    <form:input type="text" class="form-control" placeholder="地区" required="" path="location"/>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="学校" required="" name="pwd">
+                    <form:input type="text" class="form-control" placeholder="学校" required="" path="school"/>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="微信" required="" name="pwd">
+                    <form:input type="text" class="form-control" placeholder="专业" required="" path="major"/>
+                </div>
+                <div class="form-group">
+                    <form:input type="text" class="form-control" placeholder="微信" required="" path="wechat"/>
                 </div><div class="form-group">
-                    <input type="password" class="form-control" placeholder="手机" required="" name="pwd">
+                    <form:input type="text" class="form-control" placeholder="手机" required="" path="tel"/>
                 </div>
+                <!--这个验证码肯定不是在UserDTO里面？那么应该放在哪里？-->
                 <!-- <div class="form-group">
-                    <input type="password" class="form-control" placeholder="验证码" required="" name="pwd">
+                    <input type="text" class="form-control" placeholder="验证码" required="" name="vCode">
                 </div> -->
                 <button type="submit" class="btn btn-primary block full-width m-b" style="background-color:#44b549">创建账号</button>
 
 
-            </form>
+            </form:form>
             <p class="m-t"> <small>CopyRight &copy meetu.cn ; 2018</small> </p>
         </div>
     </div>

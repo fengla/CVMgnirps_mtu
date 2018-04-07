@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 
@@ -50,7 +51,7 @@
                                                         <strong>地点:</strong> 朝阳区 北京化工大学东校区操场 <br>
                                                         <strong>费用:</strong> 免费 <br>
                                                         <strong>发起人:</strong> ipv009 <br>
-
+                                                        <a href="#"><i class="fa fa-angle-double-right" style="margin-top:5px"><Strong>详情</strong></i></a>
                                                     </div>
                                                 </div>
 

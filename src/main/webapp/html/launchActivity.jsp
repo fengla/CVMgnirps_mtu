@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 
 <head>
@@ -25,8 +26,6 @@
 
 <body style="background-color:white">
     <div id="wrapper">
-
-
         <div class="row">
             <div class="col-lg-12">
                                 <div class="ibox float-e-margins">
@@ -39,100 +38,80 @@
                                     </div>
 
                                     <div class="ibox-content">
-                            <form method="get" class="form-horizontal">
-                                <div class="form-group"><label class="col-sm-2 control-label">活动名称</label>
 
-                                    <div class="col-sm-10"><input type="text" class="form-control"></div>
-                                </div>
-                                <div class="hr-line-dashed"></div>
-                                <div class="form-group"><label class="col-sm-2 control-label">活动时间</label>
-                                    <div class="col-sm-10"><input type="text" class="form-control"> <span class="help-block m-b-none">可以填写活动开始时间或者活动持续时间段</span>
+
+                                        <%--以下为待提交的表单信息--%>
+                                        <form method="post" action="${pageContext.request.contextPath }/doLaunchActivity" class="form-horizontal" enctype="multipart/form-data">
+                                            <div class="form-group"><label class="col-sm-2 control-label">活动名称</label>
+
+                                                <div class="col-sm-10"><input type="text" class="form-control" name="name"></div>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">活动时间</label>
+                                                <div class="col-sm-10"><input type="text" class="form-control"  name="date"> <span class="help-block m-b-none">可以填写活动开始时间或者活动持续时间段</span>
+                                                </div>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">活动地点</label>
+                                                <div class="col-sm-10"><input type="text" class="form-control" name="location"> <span class="help-block m-b-none">确保小伙伴们可以顺利抵达目的地，请填写详细位置信息哦</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">费用</label>
+
+                                                <div class="col-sm-10">
+                                                    <div>
+                                                        <label style="font-weight:normal">
+                                                            <input type="radio" value="0" id="optionsRadios1" name="charge" style="margin-top:15px;margin-right:8px">免费
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-inline">
+                                                        <label style="font-weight:normal">
+                                                            <input type="radio" value="1" id="optionsRadios2" name="charge" style="margin-top:15px;margin-right:8px">收费
+                                                        </label>
+                                                        <input type="text" name="chargeDetail" placeholder="" class="form-control" style="border:0px;border-bottom:#000000 1px solid;width:110px;margin-left:10px"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">发起人</label>
+
+                                                <div class="col-sm-10">
+                                                    <div><label style="font-weight:normal"> <input type="radio" name="sponsor" value="0" id="optionsRadios1"  style="margin-top:15px;margin-right:8px">我是发起人</label></div>
+                                                    <div><label style="font-weight:normal"> <input type="radio" name="sponsor" value="1" id="optionsRadios2" style="margin-top:15px;margin-right:8px">我是票务代理</label></div>
+                                                    <div><label style="font-weight:normal"> <input type="radio" name="sponsor" value="2" id="optionsRadios3" style="margin-top:15px;margin-right:8px">我是场地提供方</label></div>
+                                                    <div><label style="font-weight:normal"> <input type="radio" name="sponsor" value="3" id="optionsRadios4" style="margin-top:15px;margin-right:8px">以上都不是</label></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">活动海报</label>
+                                                <input type="file" name="logoFile"/>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">活动详情</label>
+
+                                                <div class="col-sm-10">
+                                                    <textarea name="details" class="note-editor note-editable form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">活动须知</label>
+
+                                                <div class="col-sm-10">
+                                                    <textarea name="tips" class="note-editor note-editable form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
+                                            <h3>更多活动相关图片...(让用户可以上传更多图片)</h3>
+                                            <button class="btn btn-sm btn-primary pull-right" data-toggle="tooltip" data-placement="top" type="submit" style="background-color:#44b549;margin-top:10px;margin-bottom:100px"> 发布活动</button>
+
+                                        </form>
                                     </div>
-                                </div>
-                                <div class="hr-line-dashed"></div>
-                                <div class="form-group"><label class="col-sm-2 control-label">活动地点</label>
-                                    <div class="col-sm-10"><input type="text" class="form-control"> <span class="help-block m-b-none">确保小伙伴们可以顺利抵达目的地，请填写详细位置信息哦</span>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">费用</label>
-
-                                    <div class="col-sm-10">
-                                      <div><label style="font-weight:normal"> <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios" style="margin-top:15px;margin-right:8px">免费</label></div>
-                                      <div class="form-inline"><label style="font-weight:normal"> <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios" style="margin-top:15px;margin-right:8px">收费</label><input type="text" placeholder="" class="form-control" style="border:0px;border-bottom:#000000 1px solid;width:110px;margin-left:10px"/></div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">发起人</label>
-
-                                    <div class="col-sm-10">
-                                        <div><label style="font-weight:normal"> <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios" style="margin-top:15px;margin-right:8px">我是发起人</label></div>
-                                        <div><label style="font-weight:normal"> <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios" style="margin-top:15px;margin-right:8px">我是票务代理</label></div>
-                                        <div><label style="font-weight:normal"> <input type="radio" value="option3" id="optionsRadios3" name="optionsRadios" style="margin-top:15px;margin-right:8px">我是场地提供方</label></div>
-                                        <div><label style="font-weight:normal"> <input type="radio" value="option4" id="optionsRadios4" name="optionsRadios" style="margin-top:15px;margin-right:8px">以上都不是</label></div>
-                                    </div>
-                                </div>
-
-                                <div class="hr-line-dashed"></div>
-                                <div class="form-group"><label class="col-sm-2 control-label">活动海报</label>
-
-                                    <div class="col-sm-10">
-<!-- 以下为文件上传 -->
-                                      <div class="ibox float-e-margins">
-                  <div class="ibox-title">
-                      <h5>Dropzone Area</h5>
-                      <div class="ibox-tools">
-                          <a class="collapse-link">
-                              <i class="fa fa-chevron-up"></i>
-                          </a>
-                          <a class="dropdown-toggle" data-toggle="dropdown" href="form_file_upload.html#">
-                              <i class="fa fa-wrench"></i>
-                          </a>
-                          <ul class="dropdown-menu dropdown-user">
-                              <li><a href="form_file_upload.html#">Config option 1</a>
-                              </li>
-                              <li><a href="form_file_upload.html#">Config option 2</a>
-                              </li>
-                          </ul>
-                          <a class="close-link">
-                              <i class="fa fa-times"></i>
-                          </a>
-                      </div>
-                  </div>
-                  <div class="ibox-content">
-                      <form id="my-awesome-dropzone" class="dropzone dz-clickable" action="form_file_upload.html#">
-                          <div class="dropzone-previews"></div>
-                          <button type="submit" class="btn btn-primary pull-right">Submit this form!</button>
-                      <div class="dz-default dz-message"><span>Drop files here to upload</span></div></form>
-                      <div>
-                          <div class="m text-right"><small>DropzoneJS is an open source library that provides drag'n'drop file uploads with image previews: <a href="https://github.com/enyo/dropzone" target="_blank">https://github.com/enyo/dropzone</a></small> </div>
-                      </div>
-                  </div>
-              </div>
-<!-- 以上为文件上传 -->
-                                    </div>
-                                </div>
-                                <div class="hr-line-dashed"></div>
-                                <div class="form-group"><label class="col-sm-2 control-label">活动详情</label>
-
-                                    <div class="col-sm-10"><textarea class="note-editor note-editable form-control"></textarea></div>
-                                </div>
-                                <div class="hr-line-dashed"></div>
-                                <div class="form-group"><label class="col-sm-2 control-label">活动须知</label>
-
-                                    <div class="col-sm-10"><textarea class="note-editor note-editable form-control"></textarea></div>
-                                </div>
-                                  <div class="hr-line-dashed"></div>
-                                  <h3>更多活动相关图片...(让用户可以上传更多图片)</h3>
-
-                            </form>
-                        </div>
 
                                 </div>
-
-
-
-
 
 
 
@@ -232,7 +211,7 @@
 
     <!-- Sparkline demo data  -->
     <script src="js/demo/sparkline-demo.js"></script>
-
+activityDetail_meetu.html
     <!-- ChartJS-->
     <script src="js/plugins/chartJs/Chart.min.js"></script>
 
@@ -252,6 +231,30 @@
         ga('create', 'UA-4625583-2', 'webapplayers.com');
         ga('send', 'pageview');
 
+    </script>
+
+    <%--先试试不用ajax，直接只用springMVC表单提交，看能不能完成我的需求？？？--%>
+    <%--直接把以上的表单改成springMVC的表单，同时在controller那里依然按照ajax那种形式的方法来写文件接收。。看能不能接收到文件？？？--%>
+    <script>
+        function doLaunchActivity() {
+            alert("enter doLaunchActivity()")
+            var formData = new FormData($( "#launchActivityForm" )[0]);
+            $.ajax({
+                url: 'http://localhost:8080/doLaunchActivity' ,
+                type: 'POST',
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (returndata) {
+                    alert(returndata);
+                },
+                error: function (returndata) {
+                    alert(returndata);
+                }
+            });
+        }
     </script>
 </body>
 </html>

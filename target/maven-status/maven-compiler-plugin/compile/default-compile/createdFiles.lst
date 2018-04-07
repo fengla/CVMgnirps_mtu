@@ -1,3 +1,16 @@
+com/meetu/controller/ActivityController.class
 com/meetu/data/User.class
-com/meetu/controller/HelloWorldController.class
+com/meetu/dao/UserDAO.class
+com/meetu/repository/ActivityRepository.class
+com/meetu/config/UserConfig.class
 com/meetu/Application.class
+com/meetu/data/ActivityOutline.class
+com/meetu/data/Student.class
+com/meetu/dto/UserDTO.class
+com/meetu/controller/UserController.class
+com/meetu/service/ActivityService.class
+com/meetu/repository/UserRepository.class
+com/meetu/controller/StudentController.class
+com/meetu/service/UserService.class
+com/meetu/dto/ActivityDTO.class
+com/meetu/config/ActivityConfig.class

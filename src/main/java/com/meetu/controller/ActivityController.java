@@ -1,79 +1,100 @@
 package com.meetu.controller;
 
-import com.meetu.data.User;
+import com.meetu.dto.ActivityDTO;
 import com.meetu.dto.UserDTO;
-import com.meetu.service.UserService;
-import lombok.extern.log4j.Log4j;
+import com.meetu.service.ActivityService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-@Log4j
+import javax.servlet.ServletContext;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+@Slf4j
 @Controller
-public class UserController {
+public class ActivityController {
 
     @Autowired
-    private UserService userService;
-//    备用代码：
-//    这个return ModelAndView也是springMVC的一种可行的return方式
-//    @GetMapping("hello")
-//    public ModelAndView init(ModelMap modelMap){
-//        System.out.println("enter success");
-//        ModelAndView mv = new ModelAndView();
-//
-//        User user = new User("ipv019", "17866616802", 25);
-//        //user.setRemark("测试remark!");
-//        modelMap.addAttribute("user", user);
-//        System.out.println(user);
-//
-//        mv.addObject("user", user);
-//        mv.setViewName("userDetail");
-//
-//        return mv;
-//    }
+    private ActivityService activityService;
 
-    @GetMapping("/test")
-    public String init(ModelMap modelMap){
-        System.out.println("enter success 2");
-        User user = new User("ipv009", "17888816802", 25);
-        modelMap.addAttribute("user", user);
-        System.out.println(user);
-        return "userDetail";
+    @Autowired
+    ServletContext context;//这是干吗的？还有其他什么方式实现文件上传吗？
+
+    @GetMapping("/launchActivity")
+    public ModelAndView launchActivity(ModelMap modelMap, UserDTO user){
+        return new ModelAndView("launchActivity", "command", new UserDTO());
     }
 
-    @GetMapping("/login")
-    public String login(ModelMap modelMap){//ModelMap modelMap
+    @PostMapping("/doLaunchActivity")
+    public String doLogin(ModelMap modelMap, @RequestParam("logoFile") MultipartFile file, ModelMap model, String name,
+                          String date, String location, String charge, int chargeDetail, int sponsor, String details, String tips){//todo：这个modelMap需要吗？（猜想：因为前台展示的数据是存在modelMap中的，所以应该还是必须的。。。）
+        ActivityDTO activityDTO;
+        try {
 
-        return "login";
-    }
+            //todo: 2018-04-06
+            //TODO: 怎么接收前端传来的数据呢？？？String name,String location看看这样能不能接收到数据呢？??
+            //TODO:现在看来文件上传是没有问题了，就看看怎么提交表单？？？
+            //todo: 搜索spriingBoot/springMVC提交表单
+            details = details.replaceAll("/n","<br>");
+            tips = tips.replaceAll("/n","<br>");
+            activityDTO = new ActivityDTO(name, date, location, charge, chargeDetail, sponsor, details, tips);
+            //todo:
+            //怎么传userid进来呢？
+            //设置activityId为"201803011526（yyyymmddhhmm）+userid"(userid八位数字，整个id用String表示)
+            //todo:end
+            //log.warn("enter doLaunchActivity, activity:" + activity);
+            String uploadPath = context.getRealPath("") + "files" + File.separator;
+            //String uploadPath = context.getRealPath("") + File.separator + "temp" + File.separator;
+            //todo:为什么下面这个log无法识别？
+            log.warn("uploadPath:" + uploadPath);
+            //Now do something with file...
+            FileCopyUtils.copy(file.getBytes(), new File(uploadPath + file.getOriginalFilename()));
 
-    @GetMapping("/doLogin")
-    public String doLogin(ModelMap modelMap, UserDTO user){//todo：这个modelMap需要吗？（猜想：因为前台展示的数据是存在modelMap中的，所以应该还是必须的。。。）
-        log.warn("enter doLogin, user" + user);
-        if(userService.checkValid(user)){
-           return "redirect:main";
-        }else{
-            return "redirect:login";
+            activityDTO.setLogo("/files/" + file.getOriginalFilename());
+
+            activityService.save(activityDTO);
+
+            log.warn("activityDTO:" + activityDTO);
+            //todo:下面开始解析文件，存mongo
+
+
+            String fileName = file.getOriginalFilename();
+
+            //成功才需要这么设置，失败了就不需要设置了
+            model.addAttribute("activity", activityDTO);
+
+            //这里加载评论区。。。点击活动详情时候也是这么展示：先从数据库中检索一下此活动id关联的评论，然后便利展示
+            model.addAttribute("comments", null);
+        }catch(IOException e){
+            log.error("launchAcitivity failed...");
+            return "launchAcitivityFailed";//返回到这个页面提示发布失败，以及详细信息，随后6s后自动跳转活动布页面（用户也可以点击立即跳转）
         }
+        
+
+        return "activityDetail";
+
     }
 
-    @GetMapping("/register")
-    public String register(){//ModelMap modelMap
-
-        return "register";
+    /**
+     * 查询所有活动信息
+     */
+    @GetMapping("/showActivities")
+    public String showActivities(ModelMap modelMap){
+        List<ActivityDTO> activityDTOList = activityService.findAll();
+        modelMap.addAttribute("activityDTOList", activityDTOList);
+        return "main";
     }
 
-    @GetMapping("/doRegister")
-    public String doRegister(ModelMap modelMap, UserDTO user){//todo：这个modelMap需要吗？（猜想：因为前台展示的数据是存在modelMap中的，所以应该还是必须的。。。）
-        log.warn("enter doLogin, user" + user);
-        if(userService.register(user)){
-            return "redirect:login";
-        }else{
-            return "redirect:register";
-        }
-    }
+
 
 
 }

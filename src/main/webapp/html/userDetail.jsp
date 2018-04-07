@@ -20,7 +20,7 @@
 </head>
 <body>
 <div class="container">
-  <h1>SpringMVC 用户详情</h1>
+  <h1>Spring用户详情</h1>
   <hr/>
 
   <table class="table tavble-bordered table-striped">

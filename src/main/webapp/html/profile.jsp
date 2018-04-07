@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 
@@ -38,12 +39,12 @@
                       <img alt="image" class="img-circle" src="img/a2.jpg">
 
 
-                      <h3 class="m-b-xs"><strong>Walle</strong></h3>
+                      <h3 class="m-b-xs"><strong>${user.nickName}</strong></h3>
 
 
                       <address class="m-t-md">
                           <strong>签名</strong><br>
-                          签名都是编的啦，妄想走遍千山万水。
+                          这里是签名
                       </address>
 
                   </a>
@@ -62,23 +63,24 @@
                                             <div class="feed-activity-list" >
 
                                                 <div class="feed-element" >
-                                                    <div><i class="fa fa-building"></i> 学校:</div><p>中国科学院大学<span class="label label-info pull-right" style="padding:0">已认证</span></p>
+                                                    <div><i class="fa fa-building"></i> 学校:</div><p>${user.school}<span class="label label-info pull-right" style="padding:0">已认证</span></p>
                                                 </div>
 
                                                 <div class="feed-element">
-                                                    <div><i class="fa fa-graduation-cap"></i> 专业:</div>计算机科学与技术
+                                                    <div><i class="fa fa-graduation-cap"></i> 专业:</div>${user.major}
                                                 </div>
 
                                                 <div class="feed-element">
-                                                    <div><i class="fa fa-birthday-cake"></i> 年龄:</div>25
+                                                    <!--改成利用生日计算年龄，js在前台计算还是在后台计算?-->
+                                                    <div><i class="fa fa-birthday-cake"></i> 生日:</div><div class="date">${user.birthday}</div>
                                                 </div>
 
                                                 <div class="feed-element">
-                                                    <div><i class="fa fa-phone"></i> 电话:</div>无(没填则置为无)
+                                                    <div><i class="fa fa-phone"></i> 电话:</div>${user.tel}
                                                 </div>
 
                                                 <div class="feed-element">
-                                                    <div><i class="fa fa-weixin"></i> 微信:</div>ipv008
+                                                    <div><i class="fa fa-weixin"></i> 微信:</div>${user.wechat}
                                                 </div>
 
 
