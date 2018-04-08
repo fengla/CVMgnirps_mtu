@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+
 <div class="footer" style="position:fixed;background-color:#44b549;color:white">
     <ul class="" style="list-style:none">
 

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class CommentConfig {
 
     @Bean
-    public CommentService getUserService(){
+    public CommentService getCommentService(){
         return new CommentService();
     }
 }

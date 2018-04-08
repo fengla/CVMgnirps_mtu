@@ -124,6 +124,7 @@
                                             </div>
                                         </div>
                                     </c:forEach>
+                                    <div id="newComment"></div>
 
 
                                 </div>
@@ -135,8 +136,8 @@
 
 
                 <div class="col-lg-12">
-                    <form id="commentForm" method="post" action="${pageContext.request.contextPath}/putComment" class="form-horizontal">
-                        <textarea class="note-editor note-editable form-control" name="content"></textarea>
+                    <div id="commentForm" class="form-horizontal">
+                        <textarea class="note-editor note-editable form-control" name="commentContent" id="commentContent"></textarea>
 
                             <%--<a href="mailbox.html" class="btn btn-sm btn-primary pull-right" data-toggle="tooltip" data-placement="top" title="Send" style="background-color:#44b549;margin-top:10px;margin-bottom:30px">--%>
                                 <%--<i class="fa fa-reply"></i> 发布留言--%>
@@ -144,16 +145,8 @@
                             <button class="btn btn-sm btn-primary pull-right" data-toggle="tooltip" data-placement="top" onclick="putComment()" style="background-color:#44b549;margin-top:10px;margin-bottom:100px">
                                 <i class="fa fa-reply"></i> 发布活动
                             </button>
-                    </form>
+                    </div>
                 </div>
-
-
-
-
-
-
-
-
 
     </div>
 
@@ -210,21 +203,49 @@
 
     <script type="text/javascript">
         function putComment() {
+            var data = {
+                activityId:1,
+                userId:1,
+                content:$("#commentContent").val()
+            };
             $.ajax({
                 //几个参数需要注意一下
                 type: "POST",//方法类型
                 dataType: "json",//预期服务器返回的数据类型
-                url: "/putComment" ,//url
-                data: $('#commentForm').serialize(),
+                url: "${pageContext.request.contextPath}/putComment" ,//url
+                //contentType: "application/json",
+                // data: $('#commentForm').serialize(),
+                data: data,
                 success: function (result) {
+                    //alert(result.toJSONString());
                     //真实逻辑：这里应该把新的评论消息加到文章下方
                     console.log(result);//打印服务端返回的数据(调试用)
-                    if (result.resultCode == 200) {
-                        alert("SUCCESS");
-                    }
-                    ;
+                    // if (result.resultCode == 200) {
+                    //     alert("SUCCESS");
+                    // }
+                    var s = "<div class=\"social-feed-box\" style=\"border:0\">\n" +
+                        "                                            <div class=\"social-avatar\">\n" +
+                        "                                                <a href=\"article.html\" class=\"pull-left\">\n" +
+                        "                                                    <img alt=\"image\" src=\"img/a1.jpg\">\n" +
+                        "                                                </a>\n" +
+                        "                                                <div class=\"media-body\">\n" +
+                        "                                                    <a href=\"article.html#\">\n" +
+                        "                                                        "+result.userId+"\n" +
+                        "                                                    </a>\n" +
+                        "                                                    <small class=\"text-muted\">"+result.updateTime+"</small>\n" +
+                        "                                                </div>\n" +
+                        "                                            </div>\n" +
+                        "                                            <div class=\"social-body\">\n" +
+                        "                                                <p>\n" +
+                        "                                                    "+result.content+"\n" +
+                        "                                                </p>\n" +
+                        "                                            </div>\n" +
+                        "                                        </div>";
+                    document.getElementById("newComment").innerHTML += s;
+
                 },
-                error : function() {
+                error : function(result) {
+                    //console.log(result);
                     //真实逻辑：提示评论失败
                     alert("评论失败！");
                 }
