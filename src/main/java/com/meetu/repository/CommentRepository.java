@@ -10,4 +10,6 @@ public interface CommentRepository extends CrudRepository<CommentDTO, Long>{
 
     public List<CommentDTO> findCommentDTOByActivityId(Long activityId);
 
+    public CommentDTO save(CommentDTO commentDTO);
+
 }

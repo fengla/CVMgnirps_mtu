@@ -18,4 +18,8 @@ public class CommentService {
     public List<CommentDTO> findCommentDTOByActivityId(Long activityId){
         return commentRepository.findCommentDTOByActivityId(activityId);
     }
+
+    public CommentDTO save(CommentDTO commentDTO){
+        return commentRepository.save(commentDTO);
+    }
 }

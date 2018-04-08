@@ -1,10 +1,12 @@
 package com.meetu.controller;
 
+import com.meetu.data.CommentDetail;
 import com.meetu.dto.ActivityDTO;
 import com.meetu.dto.CommentDTO;
 import com.meetu.dto.UserDTO;
 import com.meetu.service.ActivityService;
 import com.meetu.service.CommentService;
+import com.meetu.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -33,6 +36,9 @@ public class ActivityController {
 
     @Autowired
     private CommentService commentService;
+
+    @Autowired
+    private UserService userService;
 
 
     @GetMapping("/launchActivity")
@@ -112,11 +118,27 @@ public class ActivityController {
     @GetMapping("/activityDetail")
     public String showActivities(ModelMap modelMap, Long activityId){
         ActivityDTO activityDTO = activityService.findById(activityId);
+
+        //活动详情
         modelMap.addAttribute("activity", activityDTO);
 
         //todo:查询关联评论
         List<CommentDTO> commentDTOList = commentService.findCommentDTOByActivityId(activityId);
-        modelMap.addAttribute("commentDTOList", commentDTOList);
+
+        //不行啊。。还是要重新封装数据。。。
+        //data： CommentDetail.java
+        List<CommentDetail> commentDetailList = new ArrayList<>();
+
+        for(CommentDTO commentDTO : commentDTOList){
+            //针对每个comment查询关联用户的信息并封装数据
+            //todo: here
+            UserDTO userDTO = userService.findUserDTOById(commentDTO.getUserId());
+            CommentDetail commentDetail = new CommentDetail(userDTO.getNickName(), userDTO.getVenture(), commentDTO.getContent(), commentDTO.getUpdateTime());
+            commentDetailList.add(commentDetail);
+        }
+
+        //评论
+        modelMap.addAttribute("commentDetailList", commentDetailList);
 
         return "activityDetail";
     }

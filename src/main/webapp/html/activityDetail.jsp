@@ -101,103 +101,50 @@
                                 <div class="col-lg-12">
 
                                     <h4>【讨论区】</h4>
-                                    <div class="social-feed-box" style="border:0">
-                                        <div class="social-avatar">
-                                            <a href="article.html" class="pull-left">
-                                                <img alt="image" src="img/a1.jpg">
-                                            </a>
-                                            <div class="media-body">
-                                                <a href="article.html#">
-                                                    Andrew Williams
+
+
+
+                                    <c:forEach items="${commentDTOList}" var="comment">
+                                        <div class="social-feed-box" style="border:0">
+                                            <div class="social-avatar">
+                                                <a href="article.html" class="pull-left">
+                                                    <img alt="image" src="img/a1.jpg">
                                                 </a>
-                                                <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                                                <div class="media-body">
+                                                    <a href="article.html#">
+                                                        Andrew Williams
+                                                    </a>
+                                                    <small class="text-muted">${comment.updateTime}</small>
+                                                </div>
+                                            </div>
+                                            <div class="social-body">
+                                                <p>
+                                                    ${comment.content}
+                                                </p>
                                             </div>
                                         </div>
-                                        <div class="social-body">
-                                            <p>
-                                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                                default model text.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="social-feed-box" style="border:0">
-                                        <div class="social-avatar">
-                                            <a href="article.html" class="pull-left">
-                                                <img alt="image" src="img/a2.jpg">
-                                            </a>
-                                            <div class="media-body">
-                                                <a href="article.html#">
-                                                    Michael Novek
-                                                </a>
-                                                <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
-                                            </div>
-                                        </div>
-                                        <div class="social-body">
-                                            <p>
-                                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                                in their infancy. Packages and web page editors now use Lorem Ipsum as their
-                                                default model text.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="social-feed-box" style="border:0">
-                                        <div class="social-avatar">
-                                            <a href="article.html" class="pull-left">
-                                                <img alt="image" src="img/a3.jpg">
-                                            </a>
-                                            <div class="media-body">
-                                                <a href="article.html#">
-                                                    Alice Mediater
-                                                </a>
-                                                <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
-                                            </div>
-                                        </div>
-                                        <div class="social-body">
-                                            <p>
-                                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                                in their infancy. Packages and web page editors now use Lorem Ipsum as their
-                                                default model text.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="social-feed-box" style="border:0">
-                                        <div class="social-avatar">
-                                            <a href="article.html" class="pull-left">
-                                                <img alt="image" src="img/a5.jpg">
-                                            </a>
-                                            <div class="media-body">
-                                                <a href="article.html#">
-                                                    Monica Flex
-                                                </a>
-                                                <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
-                                            </div>
-                                        </div>
-                                        <div class="social-body">
-                                            <p>
-                                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                                in their infancy. Packages and web page editors now use Lorem Ipsum as their
-                                                default model text.
-                                            </p>
-                                        </div>
-                                    </div>
+                                    </c:forEach>
 
 
                                 </div>
 
-                              <div class="col-lg-12">
+    <div class="col-lg-12">
 
 
 
 
 
                 <div class="col-lg-12">
-                  <textarea class="note-editor note-editable form-control"></textarea>
-                  <a href="mailbox.html" class="btn btn-sm btn-primary pull-right" data-toggle="tooltip" data-placement="top" title="Send" style="background-color:#44b549;margin-top:10px;margin-bottom:30px"><i class="fa fa-reply"></i> 发布留言</a>
+                    <form id="commentForm" method="post" action="${pageContext.request.contextPath}/putComment" class="form-horizontal">
+                        <textarea class="note-editor note-editable form-control" name="content"></textarea>
+
+                            <%--<a href="mailbox.html" class="btn btn-sm btn-primary pull-right" data-toggle="tooltip" data-placement="top" title="Send" style="background-color:#44b549;margin-top:10px;margin-bottom:30px">--%>
+                                <%--<i class="fa fa-reply"></i> 发布留言--%>
+                            <%--</a>--%>
+                            <button class="btn btn-sm btn-primary pull-right" data-toggle="tooltip" data-placement="top" onclick="putComment()" style="background-color:#44b549;margin-top:10px;margin-bottom:100px">
+                                <i class="fa fa-reply"></i> 发布活动
+                            </button>
+                    </form>
                 </div>
 
 
@@ -207,83 +154,12 @@
 
 
 
-                              </div>
-                            </div>
 
+    </div>
 
-                                    </div>
-                                </div>
+            <%--引入公用footer--%>
+            <jsp:include page="footer.jsp"></jsp:include>
 
-
-
-
-
-
-                <div class="footer" style="position:fixed;background-color:#44b549;color:white">
-                  <ul class="" style="list-style:none">
-
-                    <li class="col-xs-3">
-                      <a href="index_meetu.html#" style="color:white">
-                        <i class="fa fa-institution" style="padding-left:6px"></i><br>首页
-                      </a>
-                    </li>
-                    <li class="col-xs-3">
-
-                      <a href="login.html" style="color:white">
-                        <i class="fa fa-group" style="padding-left:11px"></i><br>meetu
-                      </a>
-                    </li>
-
-
-                    <li class="col-xs-3 dropup">
-                      <a href="login.html" class="dropup-toggle count-info" data-toggle="dropdown" style="color:white">
-                        <i class="fa fa-rocket"  style="padding-left:9px"></i><br>X-Lab
-                      </a>
-                      <ul class="dropdown-menu dropdown-messages" style="padding-bottom:0;min-width:0;margin-bottom:10px;background-color:#44b549">
-                        <li>
-                            <div class="dropdown-messages-box">
-
-                                <div class="media-body">
-                                    <small style="color:white">10点10分</small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <div class="dropdown-messages-box">
-
-                                <div class="media-body ">
-                                    <small style="color:white"> 告  白 墙</small>
-
-                                </div>
-                            </div>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <div class="dropdown-messages-box">
-
-                                <div class="media-body ">
-                                    <small style="color:white">历史推文</small>
-
-                                </div>
-                            </div>
-                        </li>
-                        <li class="divider"></li>
-                    </ul>
-                    </li>
-                    <li class="col-xs-3">
-                      <a href="profile_meetu.html" class="right-sidebar-toggle" style="color:white">
-                        <i class="fa fa-align-justify"></i><br>我
-                      </a>
-                    </li>
-                  </ul>
-                    <!-- <div class="pull-right">
-                        10GB of <strong>250GB</strong> Free.
-                    </div>
-                    <div>
-                        <strong>Copyright</strong> Example Company &copy; 2014-2015
-                    </div> -->
-                </div>
             </div>
         </div>
 
@@ -332,10 +208,30 @@
     <!-- Toastr -->
     <script src="js/plugins/toastr/toastr.min.js"></script>
 
-
-    <script>
-
+    <script type="text/javascript">
+        function putComment() {
+            $.ajax({
+                //几个参数需要注意一下
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "/putComment" ,//url
+                data: $('#commentForm').serialize(),
+                success: function (result) {
+                    //真实逻辑：这里应该把新的评论消息加到文章下方
+                    console.log(result);//打印服务端返回的数据(调试用)
+                    if (result.resultCode == 200) {
+                        alert("SUCCESS");
+                    }
+                    ;
+                },
+                error : function() {
+                    //真实逻辑：提示评论失败
+                    alert("评论失败！");
+                }
+            });
+        }
     </script>
+
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -346,5 +242,7 @@
         ga('send', 'pageview');
 
     </script>
+
+
 </body>
 </html>

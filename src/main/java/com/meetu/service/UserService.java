@@ -42,4 +42,8 @@ public class UserService {
     public UserDTO findUserDTOByEmail(String email){
         return userRepository.findUserDTOByEmail(email);
     }
+
+    public UserDTO findUserDTOById(Long id){
+        return userRepository.findUserDTOById(id);
+    }
 }

@@ -10,6 +10,8 @@ public interface UserRepository extends CrudRepository<UserDTO, Long>{
 
     public UserDTO findUserDTOByEmail(String email);
 
+    public UserDTO findUserDTOById(Long id);
+
     public UserDTO save(UserDTO userDTO);//todo: 用户注册
 
     //关于这种方法自动生成机制还是不明白？

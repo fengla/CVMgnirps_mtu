@@ -21,8 +21,17 @@ public class CommentDTO {
 
     private String content;//评论内容
     private Long activityId;//所评论的活动的id
-    private int userId;//用户id
+    private Long userId;//用户id
     private Date updateTime;//更新时间
+
+    public CommentDTO(){}
+
+    public CommentDTO(String content, Long activityId, Long userId, Date updateTime){
+        this.content = content;
+        this.activityId = activityId;
+        this.userId = userId;
+        this.updateTime = updateTime;
+    }
 
 
 }
